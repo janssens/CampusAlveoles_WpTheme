@@ -1,0 +1,24 @@
+.pmpro_login_wrap{
+  margin: auto;
+  width: 20rem;
+  max-width: 100%;
+}
+#loginform{
+  & > p{
+    text-align: center;
+    label{
+      text-align: center;
+    }
+  }
+}
+#pmpro_level-1{
+   #other_discount_code_p{
+     display: none;
+   }
+}
+ul.logged_in_menu{
+  list-style: none;
+  li{
+
+  }
+}
