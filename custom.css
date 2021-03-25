@@ -15,16 +15,25 @@
   display: none;
 }
 
+#page > p, #page > div:not(#layout) {
+  max-width: 1140px;
+  margin: auto;
+}
+
+footer#colophon {
+  margin-top: 2rem;
+}
+
 ul.top_menu {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: flex-end;
 }
 ul.top_menu li {
-  display: block;
+  display: flex;
   margin-right: 1rem;
 }
 ul.top_menu li:last-child {

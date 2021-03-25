@@ -31,9 +31,9 @@ ul.top_menu{
   margin: 0;
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: flex-end;
   li{
-    display: block;
+    display: flex;
     margin-right: 1rem;
     &:last-child{
       margin-right: 0;
