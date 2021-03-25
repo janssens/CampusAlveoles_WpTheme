@@ -16,6 +16,15 @@
      display: none;
    }
 }
+#page{
+  & > p, & > div:not(#layout){
+    max-width: 1140px;
+    margin: auto;
+  }
+}
+footer#colophon{
+  margin-top: 2rem;
+}
 ul.top_menu{
   list-style: none;
   padding: 0;
