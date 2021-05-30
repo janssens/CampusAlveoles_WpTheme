@@ -10,7 +10,7 @@ get_header();
 
 $url = get_field('bdd_url');
 ?>
-<iframe id="main" src="" frameborder="0" width="100%" height="100%">
+<iframe id="main" src="" frameborder="0" width="100%" height="100%" style="min-height: 900px">
 
 </iframe>
 <script>
