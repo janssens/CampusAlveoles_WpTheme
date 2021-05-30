@@ -121,4 +121,51 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
 
+    acf_add_local_field_group(array(
+        'key' => 'group_60b348dc189ad',
+        'title' => 'Plantoteque page',
+        'fields' => array(
+            array(
+                'key' => 'field_60b348dc26c47',
+                'label' => 'Url de la base de donnée',
+                'name' => 'bdd_url',
+                'type' => 'url',
+                'instructions' => 'entrez l\'url de la base de donnée des plantes a insérer',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => 'https://plantes.universite-alveoles.fr',
+                'placeholder' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page',
+                ),
+                array(
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'page-template/plantoteque.php',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'acf_after_title',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => array(
+            0 => 'the_content',
+        ),
+        'active' => true,
+        'description' => '',
+    ));
+
 endif;
