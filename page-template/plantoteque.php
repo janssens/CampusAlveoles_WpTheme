@@ -17,10 +17,12 @@ $url = get_field('bdd_url');
 let url = "<?php echo $url; ?>"+window.location.hash.substr(2);
     document.getElementById('main').setAttribute('src',url);
     window.addEventListener('message', message => {
-    console.log(message.data);
-    document.title = message.data.meta_title;
-    history.pushState(message.data, message.data.meta_title,"#!"+message.data.path+message.data.search);
-});
+        console.log(message.data);
+        document.title = message.data.meta_title;
+        let full_path = (message.data.path) ? message.data.path : '';
+        full_path += (typeof message.data.search != "undefined") ? message.data.search : '';
+        history.pushState(message.data, message.data.meta_title,"#!"+full_path);
+    });
     window.addEventListener('popstate', function(e){
         if(e.state){
             document.getElementById('main').setAttribute('src','<?php echo $url; ?>'+e.state.path+e.state.search);
